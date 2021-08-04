@@ -1,4 +1,10 @@
-<button>Start Quiz</button>
+<script>
+  import { Link } from "svelte-navigator";
+</script>
+
+<Link to="/overview">
+  <button>Next</button>
+</Link>
 
 <style>
   button {

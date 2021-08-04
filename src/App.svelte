@@ -3,11 +3,16 @@
   import { Router, Route } from "svelte-navigator";
   import * as Routes from "./routes/index";
   import Home from "./pages/Home.svelte";
+  import Overview from "./pages/Overview.svelte";
 </script>
 
 <Router>
-  <Route to={Routes.HOME}>
+  <Route path={Routes.HOME}>
     <Home />
+  </Route>
+
+  <Route path={Routes.OVERVIEW}>
+    <Overview />
   </Route>
 </Router>
 
