@@ -7,7 +7,7 @@
 <div class="overview">
   <div class="heading">
     <h2>Quiz starting!</h2>
-    <p>You have 30 seconds for every question</p>
+    <p>You get 1 minute for every question</p>
     <p>Carefully read the question and answers first.</p>
     <p>Good luck, have fun!</p>
   </div>
