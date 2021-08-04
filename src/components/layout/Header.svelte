@@ -7,5 +7,6 @@
     background: grey;
     text-align: center;
     padding: 1.45rem;
+    margin-bottom: 1rem;
   }
 </style>

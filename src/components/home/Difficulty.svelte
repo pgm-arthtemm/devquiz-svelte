@@ -1,63 +1,55 @@
 <script>
   import { quizSettings } from "../../stores";
 
-  const categories = [
-    "All",
-    "Code",
-    "Bash",
-    "CMS",
-    "DevOps",
-    "Docker",
-    "Linux",
-    "SQL",
-  ];
+  const difficulties = ["Easy", "Medium", "Hard"];
+
   const handleClick = (e) => {
     console.log(e.target.dataset.id);
     quizSettings.set({
       ...$quizSettings,
-      category: e.target.dataset.id,
+      difficulty: e.target.dataset.id,
     });
   };
 </script>
 
-<div class="categories">
-  <h2>Categories</h2>
-  <ul class="category__list">
-    {#each categories as category}
+<div class="difficulties">
+  <h2>Difficulty</h2>
+  <ul class="difficulty__list">
+    {#each difficulties as difficulty}
       <li
-        data-id={category}
+        data-id={difficulty}
         on:click={(e) => {
           handleClick(e);
         }}
-        class="category__list--item"
+        class="difficulties__list--item"
       >
-        {category}
+        {difficulty}
       </li>
     {/each}
   </ul>
 </div>
 
 <style>
-  .categories {
+  .difficulties {
     margin-bottom: 2rem;
   }
   h2 {
     margin-bottom: 1rem;
   }
-  .category__list {
+  .difficulty__list {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
   }
-  .category__list--item {
+  .difficulties__list--item {
     padding: 1rem;
     border-radius: 5px;
-    width: 12%;
+    width: 33%;
     text-align: center;
     font-weight: bold;
     background: grey;
   }
-  .category__list--item:hover {
+  .difficulties__list--item:hover {
     background: rgb(192, 135, 59);
     color: white;
     cursor: pointer;
