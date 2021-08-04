@@ -5,3 +5,7 @@ export const quizSettings = writable({
   difficulty: "Easy",
   amount: 15,
 });
+
+export const questions = writable({
+  data: null,
+});
