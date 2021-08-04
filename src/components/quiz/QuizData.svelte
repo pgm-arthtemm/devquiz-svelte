@@ -15,7 +15,6 @@
 
   let index = 0;
   let data = [];
-  let answers = [];
 
   onMount(async () => {
     const response = await fetch(
@@ -51,7 +50,7 @@
     {/if}
   {/if}
 
-  {#if index < $quizSettings.amount}
+  {#if index < $quizSettings.amount - 1}
     <button on:click={() => nextQuestion()}>Next question</button>
   {:else}
     <Link to="/results">
