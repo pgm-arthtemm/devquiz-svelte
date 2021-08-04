@@ -1,5 +1,18 @@
 <script>
-  console.log("test");
+  import "./main.css";
+  import { Router, Route } from "svelte-navigator";
+  import * as Routes from "./routes/index";
+  import Home from "./pages/Home.svelte";
 </script>
 
-<h1>test</h1>
+<Router>
+  <Route to={Routes.HOME}>
+    <Home />
+  </Route>
+</Router>
+
+<style>
+  :global(html) {
+    background: rgb(47, 47, 47);
+  }
+</style>
