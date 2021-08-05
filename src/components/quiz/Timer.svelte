@@ -1,15 +1,19 @@
 <script>
   import { onMount } from "svelte";
 
-  let time = 30;
+  export let nextQuestion;
+
+  let timeLeft = 60;
 
   onMount(() => {
     setInterval(() => {
-      time -= 1;
+      timeLeft -= 1;
+      if (timeLeft === 0) {
+        timeLeft = 60;
+        nextQuestion();
+      }
     }, 1000);
   });
 </script>
 
-<div class="timer">
-  <h3>{time}s left</h3>
-</div>
+<h3>{timeLeft}</h3>

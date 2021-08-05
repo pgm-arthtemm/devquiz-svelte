@@ -25,9 +25,3 @@
     <Results />
   </Route>
 </Router>
-
-<style>
-  :global(html) {
-    background: rgb(47, 47, 47);
-  }
-</style>

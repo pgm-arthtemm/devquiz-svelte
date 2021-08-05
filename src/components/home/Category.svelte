@@ -11,6 +11,7 @@
     "Linux",
     "SQL",
   ];
+
   const handleClick = (e) => {
     console.log(e.target.dataset.id);
     quizSettings.set({
@@ -29,7 +30,6 @@
         on:click={(e) => {
           handleClick(e);
         }}
-        class="category__list--item"
       >
         {category}
       </li>
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: space-between;
   }
-  .category__list--item {
+  .category__list li {
     padding: 1rem;
     border-radius: 5px;
     width: 12%;
@@ -57,7 +57,7 @@
     font-weight: bold;
     background: grey;
   }
-  .category__list--item:hover {
+  .category__list li:hover {
     background: rgb(192, 135, 59);
     color: white;
     cursor: pointer;

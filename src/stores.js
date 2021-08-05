@@ -9,3 +9,5 @@ export const quizSettings = writable({
 export const questions = writable({
   data: null,
 });
+
+export const answerData = writable([]);
